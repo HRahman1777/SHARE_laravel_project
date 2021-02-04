@@ -42,4 +42,24 @@ class OneController extends Controller
         $unote = DB::table('notes')->where('id', $i)->delete();
         return redirect()->back()->with('delete', 'Successfully deleted!');
     }
+
+    public function nedit($i)
+    {
+        $unote = DB::table('notes')->where('id', $i)->first();
+        return view('noteupdate', compact('unote'));
+    }
+
+    public function nupdate(Request $request, $i)
+    {
+        $data = array();
+        $data['name'] = $request->wname;
+        $data['title'] = $request->title;
+        $data['note'] = $request->note;
+        $note = DB::table('notes')->where('id', $i)->update($data);
+        //return response()->json($data);
+        if ($note)
+            return redirect()->back()->with('message', 'Successfully updated!');
+        else
+            return redirect()->back()->with('error', 'Error! Something wrong!');
+    }
 }

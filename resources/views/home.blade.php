@@ -69,7 +69,7 @@
             <td>{{$n->note}}</td>
             <td>{{$n->created_at}}</td>
             <td>
-                <a href="" class="btn btn-sm btn-info">Edit</a>
+                <a href="{{ url('note/edit/'.$n->id) }}" class="btn btn-sm btn-info">Edit</a>
                 <a href="{{ url('note/delete/'.$n->id) }}" class="btn btn-sm btn-danger">Delete</a>
                 <a href="{{ url('note/view/'.$n->id) }}" class="btn btn-sm btn-success">View</a>
             </td>

@@ -34,15 +34,31 @@ Route::get('contact', function () {
     return view('contact');
 });
 
+//show data from database
 Route::get('home', 'App\Http\Controllers\OneController@mhome')->name('mhome');
 
+//push to database , submit
 Route::post('note/home', 'App\Http\Controllers\OneController@nhome')->name('note.home');
 
-
+//test controller
 Route::get('con', 'App\Http\Controllers\OneController@test')->name('conn');
 
+//single data show
 Route::get('note/view/{id}', 'App\Http\Controllers\OneController@ndetails');
+
+//delete data
 Route::get('note/delete/{id}', 'App\Http\Controllers\OneController@ndelete');
+
+
+//edit/update data
+Route::get('note/edit/{id}', 'App\Http\Controllers\OneController@nedit'); //for show
+Route::post('note/update/{id}', 'App\Http\Controllers\OneController@nupdate'); //update
+
+
+
+
+
+
 
 //<a href="{{ route('contact') }}">Contact</a></li>
 //Route::get(md5('abc'), function () {  //md5 is generate a encpted value for abc.. we can use only string what we want to show
