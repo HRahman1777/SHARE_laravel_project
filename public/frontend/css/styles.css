@@ -5,9 +5,10 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    background: rgb(27, 27, 27);
+    height: 35px;
+    background: black;
     text-align: center;
-    color: azure;
+    color: white;
 }
 
 .container {

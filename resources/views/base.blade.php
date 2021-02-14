@@ -45,9 +45,10 @@
 
     </div>
 
-    <div class="footer-fix">
-        <p><i>HasiburRahman 2021</i></p>
-    </div>
+
+    <footer class="footer-fix">
+        <p id="copyrightid">Copyright &copy; HasiburRahman 2021</p>
+    </footer>
 
 
 
