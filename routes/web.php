@@ -58,7 +58,8 @@ Route::post('note/update/{id}', 'App\Http\Controllers\OneController@nupdate'); /
 //post section
 Route::post('post/save', 'App\Http\Controllers\PostController@SavePost')->name('post.save');
 
-
+//database with posts show
+Route::get('allposts', 'App\Http\Controllers\PostController@Allposts')->name('all_post');
 
 
 

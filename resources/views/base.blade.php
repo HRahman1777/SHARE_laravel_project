@@ -21,6 +21,7 @@
         <div class="navbar-collapse collapse" id="navbarColor01">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item"><a class="nav-bg nav-link" href="{{route('mhome')}}"> Home </a></li>
+                <li class="nav-item"><a class="nav-link nav-bg" href="{{ route('all_post') }}"> Posts </a></li>
                 <li class="nav-item"><a class="nav-link nav-bg" href="{{ url('about') }}"> About </a></li>
                 <li class="nav-item"><a class="nav-link nav-bg" href="{{ url('contact') }}"> Contact </a></li>
 

@@ -13,7 +13,7 @@ class PostController extends Controller
         $validatedData = $request->validate([
             'ptitle' => 'required|max:200',
             'picdis' => 'required',
-            'photo' => 'mimes:jpeg,jpg,png,PNG | max:2000',
+            'photo' => 'mimes:jpeg,jpg,JPG,png,PNG | max:2000',
         ]);
 
 
@@ -34,10 +34,10 @@ class PostController extends Controller
             $note = DB::table('posts')->insert($data);
 
             if ($note) {
-                return response()->json($note);
+                //return response()->json($note);
                 return redirect()->back()->with('message', 'Successfully Post with photo saved!');
             } else {
-                return response()->json($note);
+                //return response()->json($note);
                 return redirect()->back()->with('error', 'Error! Something wrong!');
             }
         } else {
@@ -50,5 +50,12 @@ class PostController extends Controller
                 return redirect()->back()->with('error', 'Error! Something wrong!');
             }
         }
+    }
+
+
+    public function Allposts()
+    {
+        $pst = DB::table('posts')->get();
+        return view('posts', compact('pst'));
     }
 }
