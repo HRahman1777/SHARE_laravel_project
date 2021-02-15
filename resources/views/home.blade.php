@@ -24,7 +24,7 @@
 
 <div class="form-div-n post-form">
     <h4>Create Post</h4>
-    <form action="#" method="post">
+    <form action="{{ route('post.save') }}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
             <label for="title">Title: </label>

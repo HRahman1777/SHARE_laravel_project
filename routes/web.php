@@ -55,6 +55,10 @@ Route::get('note/edit/{id}', 'App\Http\Controllers\OneController@nedit'); //for 
 Route::post('note/update/{id}', 'App\Http\Controllers\OneController@nupdate'); //update
 
 
+//post section
+Route::post('post/save', 'App\Http\Controllers\PostController@SavePost')->name('post.save');
+
+
 
 
 
