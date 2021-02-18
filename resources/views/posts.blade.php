@@ -3,7 +3,7 @@
 
 <title>Posts | SHARE</title>
 
-<h3 class="text-center mt-3">This is Post's detail page</h3>
+<h3 class="text-center mt-3">This is All Post page</h3>
 <br>
 <hr>
 @foreach($pst as $p)
@@ -15,7 +15,7 @@
 
         <a href="#" class="btn btn-sm btn-info">Edit</a>
         <a href="#" class="btn btn-sm btn-danger">Delete</a>
-        <a href="#" class="btn btn-sm btn-success">View</a>
+        <a href="{{ url('post/view/'.$p->id) }}" class="btn btn-sm btn-success">View</a>
     </div>
 </div>
 @endforeach

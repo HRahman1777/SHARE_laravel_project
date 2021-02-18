@@ -58,4 +58,10 @@ class PostController extends Controller
         $pst = DB::table('posts')->get();
         return view('posts', compact('pst'));
     }
+
+    public function SinglePost($i)
+    {
+        $spos = DB::table('posts')->where('id', $i)->first();
+        return view('postdetails')->with('pos', $spos);
+    }
 }

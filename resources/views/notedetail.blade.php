@@ -13,7 +13,7 @@
     <div class="card-body">
         <h5 class="card-title">{{$un->title}}</h5>
         <p class="card-text">{{$un->note}}</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <a href="{{ url()->previous() }}" class="btn btn-primary">Go Back</a>
     </div>
     <div class="card-footer text-muted">
         {{$un->created_at}}

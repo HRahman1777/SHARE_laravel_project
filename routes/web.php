@@ -61,6 +61,10 @@ Route::post('post/save', 'App\Http\Controllers\PostController@SavePost')->name('
 //database with posts show
 Route::get('allposts', 'App\Http\Controllers\PostController@Allposts')->name('all_post');
 
+//single post show
+Route::get('post/view/{id}', 'App\Http\Controllers\PostController@SinglePost');
+
+
 
 
 
