@@ -64,4 +64,26 @@ class PostController extends Controller
         $spos = DB::table('posts')->where('id', $i)->first();
         return view('postdetails')->with('pos', $spos);
     }
+
+    public function EditPost($i)
+    {
+        $spos = DB::table('posts')->where('id', $i)->first();
+        return view('postupdate')->with('pos', $spos);
+    }
+
+    public function PostUpdate(Request $request, $i)
+    {
+        $data = array();
+        $data['ptitle'] = $request->ptitle;
+        $data['picdis'] = $request->picdis;
+        $photo = $request->file('photo');
+
+        $opost = DB::table('posts')->where('id', $i)->update($data);
+        //return response()->json($data);
+
+        if ($opost)
+            return redirect()->back()->with('message', 'Successfully updated!');
+        else
+            return redirect()->back()->with('error', 'Error! Something wrong!');
+    }
 }

@@ -3,7 +3,7 @@
 
 <title>Post | SHARE</title>
 
-<h3 class="text-center mt-3">This is Post's detail page</h3>
+<h3 class="text-center mt-3">This is Post's details page</h3>
 <br>
 <hr>
 <div class="card cardC">

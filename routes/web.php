@@ -64,6 +64,9 @@ Route::get('allposts', 'App\Http\Controllers\PostController@Allposts')->name('al
 //single post show
 Route::get('post/view/{id}', 'App\Http\Controllers\PostController@SinglePost');
 
+//edit/update data
+Route::get('post/edit/{id}', 'App\Http\Controllers\PostController@EditPost'); //for show
+Route::post('post/update/{id}', 'App\Http\Controllers\PostController@PostUpdate'); //update
 
 
 
